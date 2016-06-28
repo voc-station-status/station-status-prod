@@ -137,7 +137,9 @@ d3.select("svg").append("g")
   d3.select("svg").append("text")
   .text(type)
   .attr("y", 50 + (i * 90))
-  .attr("x", 0);
+  .attr("x", 0)
+  .on("click", function() { window.open("http://ebas-feedback.nilu.no/login_page.php"); }); // when clicked, opens window with google.com.
+
 
 })
 
