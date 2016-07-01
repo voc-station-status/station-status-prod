@@ -137,6 +137,7 @@ d3.select("svg").append("g")
 
   d3.select("svg").append("text")
   .text(type)
+  .attr("font-weight","bold")
   .attr("y", 50 + (i * 90))
   .attr("x", 0)
   .on('mouseover', 'Left click to move on to Mantis issue')
