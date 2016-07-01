@@ -1,14 +1,11 @@
-status,start,end,stationName
-"red","1/1/2014","1/1/2015","Kosetice"
-"green","1/1/2014","1/1/2016","Hohenpeissenberg"
-"orange","1/1/2015","1/1/2016","Pallas"
-"grey","1/1/2014","1/1/2015","Rigi"
-"grey","1/1/2016","1/1/2020","Hohenpeissenberg"
-"green","1/1/2014","1/1/2016","Melpitz"
-"yellow","1/1/2015","1/1/2016","Jungfraujoch"
-"grey","1/1/2014","1/1/2015","Hyytiälä"
-
-
-
-
+status,start,end,stationName,mantisLink
+"olive","1/1/2014","1/1/2015","Kosetice","http://ebas-feedback.nilu.no/view.php?id=48"
+"maroon","1/1/2014","1/1/2016","Hohenpeissenberg","http://ebas-feedback.nilu.no/view.php?id=46"
+"orange","1/1/2015","1/1/2016","Pallas","http://ebas-feedback.nilu.no/view.php?id=50"
+"orange","1/1/2014","1/1/2015","Rigi","http://ebas-feedback.nilu.no/view.php?id=52"
+"olive","1/1/2016","1/1/2018","Hohenpeissenberg","http://ebas-feedback.nilu.no/view.php?id=46"
+"maroon","1/1/2018","1/1/2020","Hohenpeissenberg","http://ebas-feedback.nilu.no/view.php?id=46"
+"steelblue","1/1/2014","1/1/2016","Melpitz","http://ebas-feedback.nilu.no/view.php?id=34"
+"steelblue","1/1/2015","1/1/2016","Jungfraujoch","http://ebas-feedback.nilu.no/view.php?id=47"
+"grey","1/1/2014","1/1/2015","Hyytiälä","http://ebas-feedback.nilu.no/view.php?id=34"
 

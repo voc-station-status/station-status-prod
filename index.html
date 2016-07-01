@@ -75,14 +75,15 @@ var timeline = d3.layout.timeline()
     .extent([timelineStart, timelineEnd])
     //.extent(["1/1/2014", "1/1/2020"])
     .padding(3)
-    .maxBandHeight(20);
+    .maxBandHeight(40);
 
 var margin = {top: 20, right: 0, bottom: 40, left: 0},
-    width = 1050 - margin.left - margin.right,
+    width = 1250 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
 //Create the SVG canvas   
 var svg = d3.select("body").append("svg")
+    //.attr("id","timeline_plot")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -91,7 +92,7 @@ var svg = d3.select("body").append("svg")
 var axisScale = d3.time.scale()
                         //.domain([minDate, maxDate])
                         .domain([new Date("1/1/2014"), new Date("1/1/2020")])
-                        .range([200, width-50]);
+                        .range([200, 1050-50]);
         
 //Create the Axis
 var xAxis = d3.svg.axis()         
@@ -102,7 +103,7 @@ var yearsArray = [];
     
 var minDate = new Date(Math.min.apply(null,datesArray));
 var maxDate = new Date(Math.max.apply(null,datesArray));
-
+    
 types.forEach(function (type, i) {
   onlyThisType = csv.filter(function(d) {return d.stationName === type});
 
@@ -139,8 +140,20 @@ d3.select("svg").append("g")
   .attr("y", 50 + (i * 90))
   .attr("x", 0)
   .on('mouseover', 'Left click to move on to Mantis issue')
-  .on("click", function() { window.open("http://ebas-feedback.nilu.no/login_page.php"); }); // when clicked, opens window with google.com.
+  .on("click", function() { window.open("http://ebas-feedback.nilu.no/login_page.php"); }); 
 
+  d3.select("svg").append("text")
+  .text("Go to Mantis issue to learn more")
+  .data(theseBands)
+  .attr("y", 50 + (i * 90))
+  .attr("x", 1020)
+  .on("mouseover", function(d) {
+    d3.select(this).style("fill", "grey");
+  }) 
+  .on("mouseout", function(d) {
+  d3.select(this).style("fill", "black");
+  })
+  .on("click", function(d) { window.open(d.mantisLink); }); 
 
 })
 
@@ -167,16 +180,16 @@ d3.selectAll("g").filter(function(d) { return d; })
 <div class='legend-title'>VOC Station Status</div>
 <div class='legend-scale'>
   <ul class='legend-labels'>
-    <li><span style='background:yellow;'></span><p class="legend-text">Data received by ebas-submit. Awaits checking by EMPA/NILU</p></li>
+    <li><span style='background:olive;'></span><p class="legend-text">Data received by ebas-submit. Awaits checking by EMPA/NILU</p></li>
     <li><span style='background:orange;'></span><p class="legend-text">Data checked by EMPA/NILU. Awaits revised data and response from data provider</p></li>
-    <li><span style='background:red;'></span><p class="legend-text">Data checked by EMPA/NILU. Awaits revised data and response by data provider. Passed deadline</p></li>
-    <li><span style='background:green;'></span><p class="legend-text">Final data are in EBAS. Everything ok</p></li>
+    <li><span style='background:maroon;'></span><p class="legend-text">Data checked by EMPA/NILU. Awaits revised data and response by data provider. Passed deadline</p></li>
+    <li><span style='background:steelblue;'></span><p class="legend-text">Final data are in EBAS. Everything ok</p></li>
     <li><span style='background:grey;'></span><p class="legend-text">no info</p></li>
   </ul>
 </div>
 </div>
 
-<p>Click the station name on the timeline, in order to move over to the Mantis issue</p>
+<p>Clicking on "Go to Mantis to learn more" will give direct you to the Mantis issue tracker portal for that listed station</p>
     
 <style type='text/css'>
   
