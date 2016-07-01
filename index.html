@@ -139,9 +139,7 @@ d3.select("svg").append("g")
   .text(type)
   .attr("font-weight","bold")
   .attr("y", 50 + (i * 90))
-  .attr("x", 0)
-  .on('mouseover', 'Left click to move on to Mantis issue')
-  .on("click", function() { window.open("http://ebas-feedback.nilu.no/login_page.php"); }); 
+  .attr("x", 0); 
 
   d3.select("svg").append("text")
   .text("Go to Mantis issue to learn more")
@@ -190,7 +188,7 @@ d3.selectAll("g").filter(function(d) { return d; })
 </div>
 </div>
 
-<p>Clicking on "Go to Mantis to learn more" will give direct you to the Mantis issue tracker portal for that listed station</p>
+<p>Clicking on "Go to Mantis to learn more" will direct you to the Mantis issue tracker portal for the listed station</p>
     
 <style type='text/css'>
   
