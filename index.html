@@ -62,6 +62,7 @@ path.area {
   color: #fff;
   border-radius: 2px;
   font-size:15px;
+  width:1000px;
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -170,7 +171,7 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>" + d.stationName + ":</strong> <span style='color:white'>" + d.status + "</span>";
+    return "<span style='color:red'>Station Name: </span>" + d.stationName + "</br>" + "<span style='color:red'>Status: </span>" + "<span style='color:white'>" + d.status + "</span> </br> " + "<span style='color:red'>Comment: </span>" + d.comment;
   })
     
 var axisScale = d3.time.scale()
