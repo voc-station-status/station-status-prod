@@ -5,6 +5,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js" charset="utf-8" type="text/javascript"></script>
 <script src="d3.layout.timeline.js" charset="utf-8" type="text/javascript"></script>    
+
+<!-- If tooltip is working then add this localy, check licences -->
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     
 <style type="text/css">
 
@@ -47,7 +50,43 @@ text {
 path.area {
   fill: #e7e7e7;
 }
+    
+/* D3-tip style */
             
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+    
+.about {
+font-size:20px;    
+}
+    
 </style>
     
 </head>
@@ -88,6 +127,13 @@ var svg = d3.select("body").append("svg")
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); 
+    
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>" + d.stationName + ":</strong> <span style='color:white'>" + d.status + "</span>";
+  })
     
 var axisScale = d3.time.scale()
                         //.domain([minDate, maxDate])
@@ -131,9 +177,11 @@ d3.select("svg").append("g")
   .attr("height", function (d) {return d.dy})
   .attr("width", function (d) {return d.end - d.start})
   .style("fill", function (d) {return d.stationName})
-  .style("fill", function (d) {return d.status})
+  .style("fill", function (d) {return d.statusColor})
   .style("stroke", "black")
-  .style("stroke-width", 1);
+  .style("stroke-width", 1)
+  .on('mouseover', tip.show)
+  .on('mouseout', tip.hide);
 
   d3.select("svg").append("text")
   .text(type)
@@ -155,6 +203,8 @@ d3.select("svg").append("g")
   .on("click", function(d) { window.open(d.mantisLink); }); 
 
 })
+
+svg.call(tip);
 
 //Draw the x axis to a group element     
 svg.append("g")
@@ -188,7 +238,8 @@ d3.selectAll("g").filter(function(d) { return d; })
 </div>
 </div>
 
-<p>Clicking on "Go to Mantis to learn more" will direct you to the Mantis issue tracker portal for the listed station</p>
+<p class="about">Move your mouse over an element on the timeline to get information for a specific time-span</p>
+<p class="about">Clicking on "Go to Mantis to learn more" will direct you to the Mantis issue tracker portal for the listed station</p>
     
 <style type='text/css'>
   
