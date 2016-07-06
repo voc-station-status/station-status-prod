@@ -158,7 +158,7 @@ var timeline = d3.layout.timeline()
 
 var margin = {top: 20, right: 0, bottom: 40, left: 0},
     width = 1250 - margin.left - margin.right,
-    height = 1400 - margin.top - margin.bottom;
+    height = 850 - margin.top - margin.bottom;
 
 //Create the SVG canvas   
 var svg = d3.select("#timeline_plot").append("svg")
@@ -206,7 +206,7 @@ csv.filter(function (d, i) {
 }
                 
 d3.select("svg").append("g")
-  .attr("transform", "translate(450," + (35 + (i * 90)) + ")")
+  .attr("transform", "translate(450," + (35 + (i * 50)) + ")")
   .selectAll("rect")
   .data(theseBands)
   .enter()
@@ -226,13 +226,13 @@ d3.select("svg").append("g")
   d3.select("svg").append("text")
   .text(type)
   .attr("font-weight","bold")
-  .attr("y", 50 + (i * 90))
+  .attr("y", 50 + (i * 50))
   .attr("x", 0); 
 
   d3.select("svg").append("text")
   .text("Go to Mantis issue to learn more")
   .data(theseBands)
-  .attr("y", 50 + (i * 90))
+  .attr("y", 50 + (i * 50))
   .attr("x", 1020)
   .on("mouseover", function(d) {
     d3.select(this).style("fill", "grey");
