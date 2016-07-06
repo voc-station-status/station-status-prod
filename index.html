@@ -226,14 +226,14 @@ d3.select("svg").append("g")
   d3.select("svg").append("text")
   .text(type)
   .attr("font-weight","bold")
-  .attr("y", 50 + (i * 50))
-  .attr("x", 0); 
+  .attr("y", 60 + (i * 50))
+  .attr("x", 100); 
 
   d3.select("svg").append("text")
   .text("Go to Mantis issue to learn more")
   .data(theseBands)
-  .attr("y", 50 + (i * 50))
-  .attr("x", 1020)
+  .attr("y", 60 + (i * 50))
+  .attr("x", 820)
   .on("mouseover", function(d) {
     d3.select(this).style("fill", "grey");
   }) 
