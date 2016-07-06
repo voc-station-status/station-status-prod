@@ -135,8 +135,8 @@ margin-left: 200px;
         
 <script>
     
-types = ["Kosetice","Hohenpeissenberg","Pallas","Rigi","Hyytiälä","Melpitz","Jungfraujoch"];
-    
+types = ["Kosetice","Pallas","Rigi","Hyytiele","Melpitz","JFJ","HPB","Sirta","Zeppelin","Peyrusse","MtCimone","Harwell","Auchencorth","CapVerde","Tardiere"];
+
 colorScale = d3.scale.ordinal()
   .domain(types)
   .range(["#96abb1", "#313746", "#b0909d", "#687a97", "#292014"]);
@@ -150,7 +150,7 @@ var timelineEnd = new Date("1/1/2020");
 //var getEndYear = timelineEnd.getFullYear();    
         
 var timeline = d3.layout.timeline()
-    .size([800,80])
+    .size([500,80])
     .extent([timelineStart, timelineEnd])
     //.extent(["1/1/2014", "1/1/2020"])
     .padding(3)
@@ -158,7 +158,7 @@ var timeline = d3.layout.timeline()
 
 var margin = {top: 20, right: 0, bottom: 40, left: 0},
     width = 1250 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 1400 - margin.top - margin.bottom;
 
 //Create the SVG canvas   
 var svg = d3.select("#timeline_plot").append("svg")
@@ -177,8 +177,8 @@ var tip = d3.tip()
     
 var axisScale = d3.time.scale()
                         //.domain([minDate, maxDate])
-                        .domain([new Date("1/1/2014"), new Date("1/1/2020")])
-                        .range([200, 1050-50]);
+                        .domain([new Date("1/1/2011"), new Date("1/1/2018")])
+                        .range([200, 780]);
         
 //Create the Axis
 var xAxis = d3.svg.axis()         
@@ -206,7 +206,7 @@ csv.filter(function (d, i) {
 }
                 
 d3.select("svg").append("g")
-  .attr("transform", "translate(200," + (35 + (i * 90)) + ")")
+  .attr("transform", "translate(450," + (35 + (i * 90)) + ")")
   .selectAll("rect")
   .data(theseBands)
   .enter()
@@ -269,9 +269,7 @@ d3.selectAll("g").filter(function(d) { return d; })
 <p class="about">Move your mouse over an element on the timeline to get information for a specific time-span</p>
 <p class="about">Clicking on "Go to Mantis to learn more" will direct you to the Mantis issue tracker portal for the listed station  
 </div>    
-    
-<div id="timeline_plot"></div>
-    
+
 <div class='my-legend' >
 <!--<div class='legend-title'>Legend:</div>-->
 <div class='legend-scale'>
@@ -283,7 +281,11 @@ d3.selectAll("g").filter(function(d) { return d; })
     <li><span style='background:grey;'></span><p class="legend-text">no info</p></li>
   </ul>
 </div>
-</div>
+</div>    
+    
+<div id="timeline_plot"></div>
+    
+
     
 <style type='text/css'>
   
