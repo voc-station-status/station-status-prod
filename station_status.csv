@@ -27,3 +27,4 @@ status,statusColor,start,end,stationName,mantisLink,comment
 "No info","grey","1/1/2015","1/1/2016","Hyytiele","http://ebas-feedback.nilu.no/view.php?id=33","No comment added"
 "No info","grey","1/1/2015","1/1/2016","Auchencorth","http://ebas-feedback.nilu.no/view.php?id=28","No comment added"
 "No info","grey","1/1/2015","1/1/2016","Harwell","http://ebas-feedback.nilu.no/view.php?id=29","No comment added"
+"Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","HPB","http://ebas-feedback.nilu.no/view.php?id=46","No comment added"
