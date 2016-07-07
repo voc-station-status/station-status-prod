@@ -17,7 +17,7 @@ status,statusColor,start,end,stationName,mantisLink,comment
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2013","1/1/2015","Peyrusse","http://ebas-feedback.nilu.no/view.php?id=31","Corrected data not received. Data needed for EMEP reporting!"
 "Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","Peyrusse","http://ebas-feedback.nilu.no/view.php?id=51","FR has to comment."
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2013","1/1/2015","Tardiere","http://ebas-feedback.nilu.no/view.php?id=34","Corrected data not received. Data needed for EMEP reporting!"
-"Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","Peyrusse","http://ebas-feedback.nilu.no/view.php?id=55","FR has to comment."
+"Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","Tardiere","http://ebas-feedback.nilu.no/view.php?id=55","FR has to comment."
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2013","1/1/2015","MtCimone","http://ebas-feedback.nilu.no/view.php?id=43","Last comments from IT needed. Data needed for EMEP reporting!"
 "Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","MtCimone","http://ebas-feedback.nilu.no/view.php?id=44","Comments from IT needed"
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2011","1/1/2015","Hyytiele","http://ebas-feedback.nilu.no/view.php?id=33","Comments from FI needed"
