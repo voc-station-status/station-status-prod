@@ -28,3 +28,5 @@ status,statusColor,start,end,stationName,mantisLink,comment
 "No info","grey","1/1/2015","1/1/2016","Auchencorth","http://ebas-feedback.nilu.no/view.php?id=28","No comment added"
 "No info","grey","1/1/2015","1/1/2016","Harwell","http://ebas-feedback.nilu.no/view.php?id=29","No comment added"
 "Final data are in EBAS. Everything ok","steelblue","1/1/2011","1/1/2013","Kosetice","http://ebas-feedback.nilu.no/view.php?id=48","No comment added"
+"Final data are in EBAS. Everything ok","steelblue","1/1/2011","1/1/2013","Pallas","http://ebas-feedback.nilu.no/view.php?id=50","No comment added"
+"Final data are in EBAS. Everything ok","steelblue","1/1/2011","1/1/2015","Rigi","http://ebas-feedback.nilu.no/view.php?id=52","No comment added"
