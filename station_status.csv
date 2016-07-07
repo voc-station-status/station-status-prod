@@ -24,3 +24,6 @@ status,statusColor,start,end,stationName,mantisLink,comment
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2014","1/1/2015","Auchencorth","http://ebas-feedback.nilu.no/view.php?id=28","Comments needed. Data needed for EMEP reporting!"
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2014","1/1/2015","Harwell","http://ebas-feedback.nilu.no/view.php?id=29","Comments needed. Data needed for EMEP reporting!"
 "Data checked by EMPA/NILU. Action needed","orange","1/1/2012","1/1/2016","CapVerde","http://ebas-feedback.nilu.no/view.php?id=44","Files received. NILU needs to transfer data to EBAS"
+"No info","grey","1/1/2015","1/1/2016","Hyytiele","http://ebas-feedback.nilu.no/view.php?id=33","No comment added"
+"No info","grey","1/1/2015","1/1/2016","Auchencorth","http://ebas-feedback.nilu.no/view.php?id=28","No comment added"
+"No info","grey","1/1/2015","1/1/2016","Harwell","http://ebas-feedback.nilu.no/view.php?id=29","No comment added"
