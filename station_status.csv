@@ -1,6 +1,6 @@
 status,statusColor,start,end,stationName,mantisLink,comment
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2013","1/1/2015","Kosetice","http://ebas-feedback.nilu.no/view.php?id=48","EMPA has to comment. CZ has to submit new files. Data needed for EMEP reporting!"
-"Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","Kosetice","http://ebas-feedback.nilu.no/view.php?id=48","EMPA has to comment. CZ has to submit files."
+"Data checked by EMPA/NILU. Action needed","red","1/1/2015","1/1/2016","Kosetice","http://ebas-feedback.nilu.no/view.php?id=48","Audit by NILU/EMPA done in November. Data need to be recalculated and resubmitted to EBAS."
 "Data checked by EMPA/NILU. Action needed. Passed deadline!","red","1/1/2013","1/1/2015","Pallas","http://ebas-feedback.nilu.no/view.php?id=50","FMI has to comment and submit files. Data needed for EMEP reporting!"
 "Data checked by EMPA/NILU. Action needed","orange","1/1/2015","1/1/2016","Pallas","http://ebas-feedback.nilu.no/view.php?id=50","FMI has to comment."
 "Final data are in EBAS. Everything ok","steelblue","1/1/2013","1/1/2015","HPB","http://ebas-feedback.nilu.no/view.php?id=27","N/A"
